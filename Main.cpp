@@ -32,15 +32,21 @@ private:
 };
 
 int main() {
-	system("chcp 1251>nul");
+	//system("chcp 1251>nul");
+  string Name, Date, Number, Address; int НомерНавчальноїГрупи;
 	Students Student1, Student2;
-	Student1.GetStudentInfo();
-	cout << "\n\n";
 
 	Student1.SetStudentName("Ivan"); Student1.SetStudentDate("12.12.2012");
 	Student1.SetStudentNumber("+380***08"); Student1.SetStudentAddress("Ukraine");
 	Student1.SetStudentНомерНавчальноїГрупи(3);
+  Student1.GetStudentInfo(); cout << "\n\n";
 
+  cout << "Введiть ім'я, дату народження, номер телефону, адресу, номер навчальної групи студента: ";
+  
+  cin >> Name >> Date >> Number >> Address >> НомерНавчальноїГрупи;
+  Student1.SetStudentName(Name); Student1.SetStudentDate(Date);
+	Student1.SetStudentNumber(Number); Student1.SetStudentAddress(Address);
+	Student1.SetStudentНомерНавчальноїГрупи(НомерНавчальноїГрупи);
 	Student1.GetStudentInfo();
 	return 0;
 }
